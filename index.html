@@ -32,44 +32,49 @@
 
   <div id="content">
     <div class="text">
-      <h2 style="color: beige;">Hi There!</h2>
-      <h2 style="color: rgb(63, 42, 203);">IM NullByte</h2>
-      <h2 class="typing" style="color: #8d2acb;"></h2>
+      <h2 style="color: #f5f5dc;">Hi There!</h2>
+      <h2 style="color: #3f2acb;">I'm NullByte</h2>
+      <h3 class="typing" style="color: #00d9ff; font-family:  'Bitcount Grid Single', system-ui; font-size:25px;"></h3>
     </div>
-    <img class="image-body" src="img/content.png" alt="" />
+    <img class="image-body" src="https://img.freepik.com/premium-photo/man-with-glasses-purple-background-with-picture-man-with-glasses-his-face_1221953-80174.jpg?semt=ais_hybrid&w=740&q=80" alt="" />
   </div>
 
   <script>
-    const typingElement = document.querySelector(".typing");
-    const words = ["Hello Everyone!", "Welcome to My Page!", "Enjoy Your Stay!"];
-    let wordIndex = 0;
-    let letterIndex = 0;
+  const typingElement = document.querySelector(".typing");
+const words = ["Hello Everyone!", "Website developer", "This is my webapp!"];
+let wordIndex = 0;
+let letterIndex = 0;
+let typingSpeed = 120; // ความเร็วพิมพ์
+let erasingSpeed = 80; // ความเร็วลบ
+let delayBetweenWords = 1000; // เวลาหยุดก่อนลบ
 
-    function typeWord() {
-      if (letterIndex < words[wordIndex].length) {
-        typingElement.textContent += words[wordIndex][letterIndex];
-        letterIndex++;
-        setTimeout(typeWord, 150);
-      } else {
-        setTimeout(eraseWord, 1000);
-      }
-    }
+function typeWord() {
+  if (letterIndex < words[wordIndex].length) {
+    typingElement.textContent += words[wordIndex][letterIndex];
+    letterIndex++;
+    setTimeout(typeWord, typingSpeed);
+  } else {
+    setTimeout(eraseWord, delayBetweenWords);
+  }
+}
 
-    function eraseWord() {
-      if (letterIndex > 0) {
-        typingElement.textContent = words[wordIndex].substring(0, letterIndex - 1);
-        letterIndex--;
-        setTimeout(eraseWord, 100);
-      } else {
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(typeWord, 500);
-      }
-    }
-    typeWord();
+function eraseWord() {
+  if (letterIndex > 0) {
+    typingElement.textContent = words[wordIndex].substring(0, letterIndex - 1);
+    letterIndex--;
+    setTimeout(eraseWord, erasingSpeed);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(typeWord, 500);
+  }
+}
+
+typeWord();
+
   </script>
   
   <div id="about">
-<h2 id="about-content">Hello My name is ... Im 20 Year old <br>Im From Thailand
+<h2 id="about-content">Hello My name is Earth <br> Im 20  Years old Im From Thailand
 </h2>
   <img class="avatar" src="img/avtprogrammer.png" alt="">
 </div>
@@ -89,7 +94,7 @@
   onclick="window.open('https://discord.com/users/1405831980473389126')"
 >
   <img width="50px" height="50px" src="img/discord.webp" alt="">
-  <p style="position: relative; left: 65px; font-size: large;">Instagram</p>
+  <p style="position: relative; left: 65px; font-size: large;">Discord</p>
 </button>
 
 <!-- ig -->

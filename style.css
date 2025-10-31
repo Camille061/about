@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Momo+Trust+Display&display=swap');
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Prompt", sans-serif;
+  /* font-family: "Prompt", sans-serif; */
+  font-family: "Momo Trust Display", sans-serif;
+  /* font-family: "Bitcount Grid Single", system-ui; */
 }
 
 html {
@@ -71,6 +74,8 @@ body {
   padding: 100px;
   gap: 40px;
   flex-wrap: wrap;
+  font-family: "Prompt", sans-serif;
+  
 }
 
 .text {
@@ -79,6 +84,7 @@ body {
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
   flex: 1;
   min-width: 280px;
+  font-family: "Bitcount Grid Single", system-ui;
 }
 
 /* 🔹 ภาพหลัก */
@@ -119,10 +125,11 @@ body {
 
 #about-content {
   max-width: 500px;
-  color: #a1a1b2;
+  color: #00e5ff;
   font-size: xx-large;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
   z-index: 2;
+
 }
 
 .avatar {

@@ -216,7 +216,7 @@ body {
   }
 }
 
-#Project {
+#contract {
   position: relative;
   top: 1000px;
 text-align: center;
@@ -292,6 +292,23 @@ footer {
     color: #f871df; /* สีชมพูเวลาชี้ */
     transform: scale(1.1);
 }
+
+.typing {
+  position: relative;
+  display: inline-block;
+}
+
+/* เส้นนิ่ง ๆ ชิดตัวอักษร */
+.typing::after {
+  content: "|";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translateX(-3px);
+  color: #00d9ff;
+  opacity: 1; /* ทำให้เห็นชัดตลอด */
+}
+
 /* git init
 git add .
 git commit -m "first commit"

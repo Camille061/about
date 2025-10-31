@@ -247,3 +247,43 @@ text-align: center;
   text-shadow: 0 0 10px rgba(248, 113, 223, 0.6);
 }
 
+.footer-container {
+/* Footer CSS */
+footer {
+    background: #1a1a1a; /* สีเข้ม */
+    color: #eee; /* ตัวอักษรสีอ่อน */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+
+    margin-top: 10px;
+}
+
+.footer-links a {
+
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+}
+
+footer {
+  text-align: center;
+      position: relative;
+  top: 1300px;
+}
+
+/* git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Camille061/about.git
+git push -u origin main */

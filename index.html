@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
+</head>
+
+<body>
+  <div id="top-head">
+    <div id="top-head-box">
+      <img
+        class="logo"
+        width="90px"
+        height="70px"
+        src="https://cdn-icons-png.flaticon.com/512/5986/5986190.png"
+        alt=""
+        />
+        
+      <ul class="menu-li">
+        <li onclick=location.href='#content'><i class="fa-regular fa-house"></i> Home</li>
+        <li onclick=location.href='#about'><i class="fa-regular fa-circle-user"></i> About</li>
+        <li onclick=location.href='#Project'><i class="fa-regular fa-inbox"></i> Contract</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="text">
+      <h2 style="color: beige;">Hi There!</h2>
+      <h2 style="color: rgb(63, 42, 203);">IM NullByte</h2>
+      <h2 class="typing" style="color: #8d2acb;"></h2>
+    </div>
+    <img class="image-body" src="img/content.png" alt="" />
+  </div>
+
+  <script>
+    const typingElement = document.querySelector(".typing");
+    const words = ["Hello Everyone!", "Welcome to My Page!", "Enjoy Your Stay!"];
+    let wordIndex = 0;
+    let letterIndex = 0;
+
+    function typeWord() {
+      if (letterIndex < words[wordIndex].length) {
+        typingElement.textContent += words[wordIndex][letterIndex];
+        letterIndex++;
+        setTimeout(typeWord, 150);
+      } else {
+        setTimeout(eraseWord, 1000);
+      }
+    }
+
+    function eraseWord() {
+      if (letterIndex > 0) {
+        typingElement.textContent = words[wordIndex].substring(0, letterIndex - 1);
+        letterIndex--;
+        setTimeout(eraseWord, 100);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeWord, 500);
+      }
+    }
+    typeWord();
+  </script>
+  
+  <div id="about">
+<h2 id="about-content">Hello My name is ... Im 20 Year old <br>Im From Thailand
+</h2>
+  <img class="avatar" src="img/avtprogrammer.png" alt="">
+</div>
+<div style="text-align: right;">
+
+  </div>
+  </div>
+
+
+  <div id="Project">
+
+<h2 class="text-contract">My ConTract</h2>
+<br>
+<!-- Discord -->
+<button 
+  id="btn-box" 
+  onclick="window.open('https://discord.com/users/1405831980473389126')"
+>
+  <img width="50px" height="50px" src="img/discord.webp" alt="">
+  <p style="position: relative; left: 65px; font-size: large;">Instagram</p>
+</button>
+
+<!-- ig -->
+<button 
+  id="btn-box" 
+  onclick="window.open('https://www.instagram.com/nullbyte_061?igsh=dTR5MDVqdzQ3ajJu')"
+>
+  <img width="50px" height="50px" src="img/ig.png" alt="">
+  <p style="position: relative; left: 65px; font-size: large;">Instagram</p>
+</button>
+<!-- fackbook -->
+<button 
+  id="btn-box" 
+  onclick="window.open('https://www.facebook.com/people/Bee-Logic/pfbid02JnbkQ2Qah1zsyF5DieAmu2TqTjm5JrsXAUmQHHv2Xk5rnAjj9K853hWeU21DSi82l/')"
+>
+  <img width="50px" height="50px" src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="">
+  <p style="position: relative; left: 65px; font-size: large;">Facebook</p>
+</button>
+  </div>
+
+<p style="position: relative; top: 2000px;">ji</p>
+</body>
+</html>

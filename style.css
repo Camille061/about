@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('https://img.freepik.com/free-vector/gradient-abstract-wireframe-background_23-2149009903.jpg?semt=ais_hybrid&w=740&q=80')
+    no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* 🔹 ส่วนหัว */
+#top-head {
+  width: 100%;
+  background: linear-gradient(to right, #730e92, #11024d);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+    position: fixed;
+}
+
+#top-head-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+
+
+
+.menu-li {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  flex-wrap: wrap;
+  position: relative;
+  right: 10px;
+}
+
+.menu-li li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-li li:hover {
+  color: #c770f0;
+  transform: scale(1.1);
+}
+
+/* 🔹 เนื้อหา */
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.text {
+  font-size: xx-large;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  flex: 1;
+  min-width: 280px;
+}
+
+/* 🔹 ภาพหลัก */
+.image-body {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+/* 🔹 เอฟเฟกต์พิมพ์ */
+.typing {
+  border-right: 2px solid #8d2acb;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2em;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+#about {
+  position: relative;
+  padding: 150px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  top: 500px;
+}
+
+#about-content {
+  max-width: 500px;
+  color: #a1a1b2;
+  font-size: xx-large;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.avatar {
+  width: 350px;
+  height: auto;
+  margin-top: 40px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+
+@media (max-width: 600px) {
+  .top-head-box {
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .menu-li {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 1.2em;
+  }
+
+  .image-body {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+  }
+
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  #about-content {
+    font-size: 1.3em;
+  }
+
+  .avatar {
+    width: 250px;
+    margin-top: 30px;
+  }
+
+
+}
+
+/* แท็บเล็ต (จอ < 900px) */
+@media (max-width: 900px) {
+  .content {
+    padding: 80px 40px;
+    gap: 30px;
+  }
+
+  .image-body {
+    width: 300px;
+    height: 300px;
+  }
+
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 40px;
+  }
+
+  #about-content {
+    font-size: 1.5em;
+  }
+
+  .avatar {
+    width: 300px;
+  }
+}
+
+#Project {
+  position: relative;
+  top: 1000px;
+text-align: center;
+
+}
+
+#btn-box {
+  padding: 5px;
+  margin: 10px auto;
+  width: 300px;
+  align-items: center;
+  display: flex;
+  border-radius: 15px;
+  background: linear-gradient(to right, #f871df, #3a00b9);
+  color: aliceblue;
+  box-shadow: 0 4px 15px rgba(58, 0, 185, 0.4);
+  transition: all 0.3s ease;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+#btn-box:hover {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(248, 113, 223, 0.5);
+}
+
+.text-contract {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.text-contract:hover {
+  color: #f871df;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(248, 113, 223, 0.6);
+}
+
